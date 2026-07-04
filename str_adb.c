@@ -9,14 +9,17 @@ int tam_str(char* str)
 		i++;
 	return (i + 1);
 }
-int tam_str_ate_c(char* str, char c)
+int tam_str_char(char* str, char c)
 {
 	int i = 0;
 	while(str[i] != c)
 		i++;
+	
+	if (str[i] == c)
+		return -1;
+
 	return (i + 1);
 }
-
 void copia_str(char* str, char* str_copiada)
 {
 

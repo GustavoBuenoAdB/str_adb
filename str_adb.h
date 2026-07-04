@@ -5,7 +5,7 @@ int tam_str(char* str);
 /** 
  * @brief retorna o tamnho da string até um determinado char c incluindo o c.
 */
-int tam_str_ate_c(char* str, char c);
+int tam_str_char(char* str, char c);
 /** 
  * @brief copia uma string em outra.
 */
