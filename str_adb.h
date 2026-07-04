@@ -1,3 +1,5 @@
+#define PTR_NULO ((void*) 0x00)
+
 /** 
  * @brief retorna o tamnho da string incluindo o '\0'.
 */

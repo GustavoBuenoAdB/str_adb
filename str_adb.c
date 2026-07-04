@@ -22,12 +22,22 @@ int tam_str_char(char* str, char c)
 }
 void copia_str(char* str, char* str_copiada)
 {
-
+	int tam = tam_str(str);
+	for (int i = 0 ; i < tam ; i++)
+		str_copiada[i] = str[i];
 }
-
 char* cria_copia_str(char* str)
 {
+	int tam = tam_str(str);
+	char* str_copiada = (char*) malloc(sizeof(char) * tam);
+	if (!str_copiada)
+		return PTR_NULO;
 
+
+	for (int i = 0 ; i < tam ; i++)
+		str_copiada[i] = str[i];
+
+	return str_copiada;
 }
 
 void preenche_str(char* str, char c)
