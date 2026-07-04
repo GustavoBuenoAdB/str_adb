@@ -1,9 +1,11 @@
-// TODO definir quais funções quero implementar nessa pequena biblioteca
-
 /** 
  * @brief retorna o tamnho da string incluindo o '\0'.
 */
 int tam_str(char* str);
+/** 
+ * @brief retorna o tamnho da string até um determinado char c incluindo o c.
+*/
+int tam_str_ate_c(char* str, char c);
 /** 
  * @brief copia uma string em outra.
 */
