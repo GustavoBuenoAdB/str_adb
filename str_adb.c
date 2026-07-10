@@ -2,6 +2,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+char* aloca_str(int tam)
+{
+	char* str = (char*) malloc(sizeof(char) * tam);
+	if (!str)
+		return PTR_NULO;
+	
+	str[tam - 1] = '\0';
+	return str;
+}
 int tam_str(char* str)
 {
 	int i = 0;
@@ -29,25 +38,29 @@ void copia_str(char* str, char* str_copiada)
 char* cria_copia_str(char* str)
 {
 	int tam = tam_str(str);
-	char* str_copiada = (char*) malloc(sizeof(char) * tam);
-	if (!str_copiada)
+	char* str_copiada = aloca_str(tam);
+	if (str_copiada == PTR_NULO)
 		return PTR_NULO;
-
 
 	for (int i = 0 ; i < tam ; i++)
 		str_copiada[i] = str[i];
 
 	return str_copiada;
 }
-
 void preenche_str(char* str, char c)
 {
-
+	int tam = tam_str(str);
+	for (int i = 0 ; i < tam ; i++)
+		str[i] = c;
 }
-
 int compara_str(char* str1, char* str2)
 {
-
+	int tam = tam_str(str1);
+	int diffs = 0;
+	for(int i = 0 ; i < tam ; i++)
+		if (str1[i] != str2[i])
+			diffs++;
+	return diffs;
 }
 
 int sub_str(char* str, char* substr)

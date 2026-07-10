@@ -1,6 +1,10 @@
 #define PTR_NULO ((void*) 0x00)
 
 /** 
+ * @brief r
+*/
+int aloca_str(int tam);
+/** 
  * @brief retorna o tamnho da string incluindo o '\0'.
 */
 int tam_str(char* str);
@@ -56,3 +60,5 @@ char* ordena_str(char* str);
  * @brief cria um histograma de frequencia dos caracteres ASCII de uma string
 */
 int* hist_str(char* str);
+
+// função de grau superior de operação de caracter?
