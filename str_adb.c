@@ -62,7 +62,23 @@ int compara_str(char* str1, char* str2)
 			diffs++;
 	return diffs;
 }
+char* concatena_str(char* str1, char* str2)
+{
+	int tam1 = tam_str(str1);
+	int tam2 = tam_str(str2);
 
+	char* concat = aloca_str(tam1 + tam2);
+	if (concat == PTR_NULO)
+		return PTR_NULO;
+
+	int i;
+	for (i = 0 ; i < tam1 ; i++)
+		concat[i] = str1[i];
+	for (int j = 0 ; j < tam2 ; j++)
+		concat[i + j] = str2[j];
+
+	return concat;
+}
 int sub_str(char* str, char* substr)
 {
 

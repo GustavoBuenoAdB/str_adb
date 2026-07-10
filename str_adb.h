@@ -1,9 +1,11 @@
 #define PTR_NULO ((void*) 0x00)
 
 /** 
- * @brief r
+ * @brief aloca um vetor de caracteres com o tamanho indicado
+ * 
+ * Retorna PTR_NULO caso falhe a alocação.
 */
-int aloca_str(int tam);
+char* aloca_str(int tam);
 /** 
  * @brief retorna o tamnho da string incluindo o '\0'.
 */
@@ -28,6 +30,10 @@ void preenche_str(char* str, char c);
  * @brief retorna o numero de diferenças entre as 2 strings e 0 caso elas sejam iguais.
 */
 int compara_str(char* str1, char* str2);
+/** 
+ * @brief aloca uma nova string e copia ambas as strings para a nova string alocada.
+*/
+char* concatena_str(char* str1, char* str2);
 /** 
  * @brief retorna a posição em que a substring é encontrada a primeira vez, ou -1 caso não encontre.
 */
